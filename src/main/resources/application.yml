@@ -1,0 +1,28 @@
+spring:
+  config:
+    activate:
+      on-profile: secret
+
+  datasource:
+    url: ${mysql.local.url}
+    username: ${mysql.local.id}
+    password: ${mysql.local.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    database: mysql
+    show-sql: true
+    open-in-view: false
+
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+logging:
+  level:
+    root: INFO
+    com.myshop: DEBUG
+    org.springframework.security: DEBUG

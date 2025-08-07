@@ -1,11 +1,5 @@
 create database shop character set utf8mb4 collate utf8mb4_general_ci;
 
-CREATE USER 'shopuser'@'localhost' IDENTIFIED BY 'shoppass';
-CREATE USER 'shopuser'@'%' IDENTIFIED BY 'shoppass';
-
-GRANT ALL PRIVILEGES ON shop.* TO 'shopuser'@'localhost';
-GRANT ALL PRIVILEGES ON shop.* TO 'shopuser'@'%';
-
 use shop;
 
 create table shop.purchase_order (
